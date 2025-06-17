@@ -65,3 +65,4 @@ Using pytorch attention
 * The server addresss is [https://localserver.voguediffusion.ai/](https://localserver.voguediffusion.ai/)
     * It should be all English but probably contains some Chinese.
 * To use the workflow, you can just right click and download the latest workflow png 574314869267336.png, then drag it into the comfyUI webpage, then the workflow should be loaded. You can scoll up and down to zoom, drag blank to move the canvas, change the prompt, upload an image or choose existing images for input. Click the blue start button to generate a batch of 4 images to test.
+* It takes about 5 hours to solve this problem and write down everything, and one more hour to set up the server/github.
