@@ -62,3 +62,6 @@ Using pytorch attention
 ![workflow_f](https://github.com/user-attachments/assets/b928e1ee-0d2e-42ad-a55d-31a4b6d2049d)
 
 * I'll try to host the server publicly for 1-2 days as a consideration of network safety (I didn't purchase a professional reverse proxy service so authorized connection is very limited). Or there probably are some cloud hoster for ComfyUI but I'm not sure.
+* The server addresss is [https://localserver.voguediffusion.ai/](https://localserver.voguediffusion.ai/)
+    * It should be all English but probably contains some Chinese.
+* To use the workflow, you can just right click and download the latest workflow png 574314869267336.png, then drag it into the comfyUI webpage, then the workflow should be loaded. You can scoll up and down to zoom, drag blank to move the canvas, change the prompt, upload an image or choose existing images for input. Click the blue start button to generate a batch of 4 images to test.
