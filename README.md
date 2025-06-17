@@ -23,7 +23,7 @@ Using pytorch attention
 * To make it easier for tracking, Width, Height, Seed and Positive Prompt are isolated in the workflow to form an input zone.     
     * Some parameters that are not often changed and conrolling the image style or quality such as negative promt, sampler steps/methods are left in the nodes.
 
-![workflow](vx_images/473395303131408.png =500x)
+![workflow](https://github.com/user-attachments/assets/b923c688-fd7d-4691-89c8-784bde7be1f6)
 
 * It's working now. But the human part relies too much on the description and has nothing from a specific person.
     * The best way to solve is is obviously using a reference from the person.
@@ -34,7 +34,9 @@ Using pytorch attention
         * However, InstantID seems to provide the best performance
             * Here I use a photo of mine from 6 month ago, since when I lose 18 lbs and had haircut recently.
             * I also set the batch size to 4 for better testing speed.
-![workflow_1](vx_images/135002925682405.png =500x)
+
+![workflow_1](https://github.com/user-attachments/assets/85ac1a22-3533-4d99-9008-d80cd5653586)
+
 * It looks good. But the pose and direction is limitted without a pose reference in this setting.
     * A straight-forward solution is to generate a reference. So I reused some parts of the workflow to generate less polished images just for pose reference.
     * This workflow structure is chosen after many adjusts and has a balance of simplism and performance.
@@ -42,16 +44,21 @@ Using pytorch attention
     * I changed the descriptional promt from "35 years old asian" to just "a person", so you can see the pose reference photo has large diversity. The performance is still good and there are some added flavors.
 * There are low chances to generate a bad reference image (for example the person is too far from the camera, or facing back to the cameral), in this case the generator will automatically use another image in the batch as reference, which is good.
     * To be honest, some of the images are prettly like my real photos.
-![workflow_2](vx_images/349406767305859.png =500x)
+
+![workflow_2](https://github.com/user-attachments/assets/fc64a5bc-84b7-4803-9f2d-6fc109a57f83)
 
 * Then I test it for other inputs such as "in the office". The prompt "portrait" is somehow too close for the photos, and other words cannot control camera distance good enough either, so I decide to adjust the reference image size to generate the photo in a good distance.
     * The distance can be conditional or even infered from the input prompt if needed.
     * The quality is pretty close to or even better than some of the existing "profesional profile" boothing apps.
-![workflow_3](vx_images/115784281693702.png =500x)
+
+![workflow_3](https://github.com/user-attachments/assets/d63bfd41-ac6a-43ae-90fb-48f5680d3cea)
+
 * Then I finalize this simple workflow to make it easier for input. One can just input an activity (or with locations) and a photo to use it. It can be done from the frontend/backbend, but it has some advantages to be done in the workflow.
 * There are lots of aspects that can be improved upon requests.
     * If user wants to provide more photos, there are more available techniques such as face embedding. Also, a specific name can be used to awake the embedding.
     * Classification can be added after the image generation to ensure output quality as well as NFW content filter.
     * S
-![workflow_f](vx_images/574314869267336.png =500x)
+
+![workflow_f](https://github.com/user-attachments/assets/b928e1ee-0d2e-42ad-a55d-31a4b6d2049d)
+
 * I'll try to host the server publicly for 1-2 days as a consideration of network safety (I didn't purchase a professional reverse proxy service so authorized connection is very limited). Or there probably are some cloud hoster for ComfyUI but I'm not sure.
