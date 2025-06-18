@@ -64,5 +64,13 @@ Using pytorch attention
 * I'll try to host the server publicly for 1-2 days as a consideration of network safety (I didn't purchase a professional reverse proxy service so authorized connection is very limited). Or there probably are some cloud hoster for ComfyUI but I'm not sure.
 * The server addresss is [https://localserver.voguediffusion.ai/](https://localserver.voguediffusion.ai/)
     * It should be all English but probably contains some Chinese.
+    * Now this server is used for python code testing
 * To use the workflow, you can just right click and download the latest workflow png 574314869267336.png, then drag it into the comfyUI webpage, then the workflow should be loaded. You can scoll up and down to zoom, drag blank to move the canvas, change the prompt, upload an image or choose existing images for input. Click the blue start button to generate a batch of 4 images to test.
 * It takes about 5 hours to solve this problem and write down everything, and one more hour to set up the server/github.
+* The python code is solution_test.py
+    * I created a simple service to test it on my local server on webpage
+    * [https://localserver.voguediffusion.ai/run](https://localserver.voguediffusion.ai/run)
+    * Choose a method, then enter the prompt for this method, and execute. After 10s-20s the command line returns and output image will show up.
+    * It's a sinlge image version instead of batch so there is a small chance to generate bad ones.
+    * To try again, probably you need to enter the url again to have a fresh run.
+* It takes about 5 hours to finish the python code and do a little optimization and about 2 hours to set up the testing service and update github.
