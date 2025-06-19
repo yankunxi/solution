@@ -42,7 +42,7 @@ negative_cond = clip.encode_from_tokens_scheduled(clip.tokenize(negative_prompt)
 # image util functions
 def tensor_to_pil(img_tensor):
     """
-    将 torch.Tensor (1, H, W, 3) 归一化图像转换为 PIL.Image
+    torch.Tensor (1, H, W, 3) to PIL.Image
     """
     img = img_tensor[0].clamp(0, 1).mul(255).byte().numpy()
     return Image.fromarray(img, mode='RGB')
